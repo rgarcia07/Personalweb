@@ -21,10 +21,37 @@ import Hero from "../components/Hero.astro";
 </Layout>
 
 <style>
+	:root {
+    --bg: #080817;
+    --bg-secondary: #11112b;
+
+    --purple: #7c3aed;
+    --violet: #8b5cf6;
+    --pink: #ec4899;
+    --blue: #3b82f6;
+    --cyan: #22d3ee;
+    --yellow: #facc15;
+
+    --text: #f8fafc;
+    --text-secondary: #a5a5c7;
+}
 	html {
 		scroll-behavior: smooth;
 	}
 	body {
-		background-color: FFFFFF;
+		background: #080817;
+		color: #f8fafc;
+		background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(124, 58, 237, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(236, 72, 153, 0.18),
+            transparent 30%
+        ),
+        #080817;
 	}
 </style>

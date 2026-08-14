@@ -14,15 +14,18 @@ const { id } = Astro.props;
             <p class="text-welcome">
                 ¡Hola! Qué bueno tenerte por aquí "Icono".
             </p>
+            <h1>
+                Soy <span class="nombre">Ramón García</span>
+            </h1>
             <h2>
                 Diseño y construyo interfaces <br />
                 con alma y cercanía.
             </h2>
 
             <p class="MyInfo">
-                -Web Developer Jr.<br>
-                -Graduado en Ingenieria en Sistemas C. en "TSJ"<br>
-                -Abierto a aprender nuevas tecnologías y lenguajes.<br>
+                -Web Developer Jr.<br />
+                -Graduado en Ingenieria en Sistemas C. en "TSJ"<br />
+                -Abierto a aprender nuevas tecnologías y lenguajes.<br />
             </p>
 
             <div class="buttons-info">
@@ -44,7 +47,7 @@ const { id } = Astro.props;
     </div>
     <div class="right-section">
         <div class="container-photo">
-        <img src={PerfilPhoto.src} width="340" height="550" />
+            <img src={PerfilPhoto.src} width="300" height="500" />
         </div>
     </div>
 </section>
@@ -89,7 +92,6 @@ const { id } = Astro.props;
         color: #ffff;
         cursor: pointer;
         height: 45px;
-
     }
     .btn-write {
         font-size: 20px;
@@ -102,7 +104,18 @@ const { id } = Astro.props;
     .right-section {
         width: 50%;
     }
-    img{
+    img {
         border-radius: 20px;
     }
+    .nombre {
+    background: linear-gradient(
+        90deg,
+        #ec4899,
+        #8b5cf6,
+        #3b82f6
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 </style>
