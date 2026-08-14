@@ -1,9 +1,108 @@
 ---
 //src/components/Hero.astro
+import "@fontsource-variable/fraunces";
+import "@fontsource-variable/fraunces/wght-italic.css";
+import FlechaIcon from "../assets/FlechaIcon.svg";
+import PerfilPhoto from "../assets/PerfilPhoto.jpeg";
 
 const { id } = Astro.props;
 ---
 
 <section id={id}>
-    <!-- <h2>Hero</h2>-->
+    <div class="left-section">
+        <div class="container-hero">
+            <p class="text-welcome">
+                ¡Hola! Qué bueno tenerte por aquí "Icono".
+            </p>
+            <h2>
+                Diseño y construyo interfaces <br />
+                con alma y cercanía.
+            </h2>
+
+            <p class="MyInfo">
+                -Web Developer Jr.<br>
+                -Graduado en Ingenieria en Sistemas C. en "TSJ"<br>
+                -Abierto a aprender nuevas tecnologías y lenguajes.<br>
+            </p>
+
+            <div class="buttons-info">
+                <a href="#Portfolio">
+                    <button class="btn-portafolio"
+                        >Ver mi portafolio
+                        <FlechaIcon
+                            width="15"
+                            height="15"
+                            class="text-blue-500"
+                        />
+                    </button></a
+                >
+                <a href="#Contact">
+                    <button class="btn-write">Escribeme</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="container-photo">
+        <img src={PerfilPhoto.src} width="340" height="550" />
+        </div>
+    </div>
 </section>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+    .text-welcome {
+        font-size: 25px;
+        font-family: "Fraunces variable", serif;
+        font-style: italic;
+    }
+    h2 {
+        font-size: 40px;
+        font-family: "Fraunces varialbe", serif;
+        font-weight: bold;
+    }
+    .buttons-info {
+        display: flex;
+        justify-content: left;
+        gap: 30px;
+        padding: 20px;
+        margin: 0px;
+        height: 50px;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+        border: 2px;
+        padding: 100px;
+        margin: 10px;
+    }
+
+    .btn-portafolio {
+        background-color: #e07a5f;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 30px;
+        color: #ffff;
+        cursor: pointer;
+        height: 45px;
+
+    }
+    .btn-write {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 30px;
+        cursor: pointer;
+        height: 45px;
+    }
+    .left-section,
+    .right-section {
+        width: 50%;
+    }
+    img{
+        border-radius: 20px;
+    }
+</style>
