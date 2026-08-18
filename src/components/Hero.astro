@@ -1,9 +1,10 @@
 ---
 //src/components/Hero.astro
+import "../styles/Hero.css";
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/fraunces/wght-italic.css";
-import FlechaIcon from "../assets/FlechaIcon.svg";
-import PerfilPhoto from "../assets/PerfilPhoto.jpeg";
+import ArrowRight from "../assets/ArrowRight.svg";
+import PerfilPhoto from "../assets/PerfilPhoto.jpeg"; 
 
 const { id } = Astro.props;
 ---
@@ -19,10 +20,10 @@ const { id } = Astro.props;
             </h1>
             <h2>
                 Diseño y construyo interfaces <br />
-                con alma y cercanía.
+                
             </h2>
 
-            <p class="MyInfo">
+            <p class="myInfo">
                 -Web Developer Jr.<br />
                 -Graduado en Ingenieria en Sistemas C. en "TSJ"<br />
                 -Abierto a aprender nuevas tecnologías y lenguajes.<br />
@@ -32,9 +33,9 @@ const { id } = Astro.props;
                 <a href="#Portfolio">
                     <button class="btn-portafolio"
                         >Ver mi portafolio
-                        <FlechaIcon
-                            width="15"
-                            height="15"
+                        <ArrowRight
+                            width="25"
+                            height="17"
                             class="text-blue-500"
                         />
                     </button></a
@@ -52,70 +53,4 @@ const { id } = Astro.props;
     </div>
 </section>
 
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 
-    .text-welcome {
-        font-size: 25px;
-        font-family: "Fraunces variable", serif;
-        font-style: italic;
-    }
-    h2 {
-        font-size: 40px;
-        font-family: "Fraunces varialbe", serif;
-        font-weight: bold;
-    }
-    .buttons-info {
-        display: flex;
-        justify-content: left;
-        gap: 30px;
-        padding: 20px;
-        margin: 0px;
-        height: 50px;
-    }
-
-    section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 100px;
-        border: 2px;
-        padding: 100px;
-        margin: 10px;
-    }
-
-    .btn-portafolio {
-        background-color: #e07a5f;
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-        border-radius: 30px;
-        color: #ffff;
-        cursor: pointer;
-        height: 45px;
-    }
-    .btn-write {
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-        border-radius: 30px;
-        cursor: pointer;
-        height: 45px;
-    }
-    .left-section,
-    .right-section {
-        width: 50%;
-    }
-    img {
-        border-radius: 20px;
-    }
-    .nombre {
-    background: linear-gradient(
-        90deg,
-        #ec4899,
-        #8b5cf6,
-        #3b82f6
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-</style>

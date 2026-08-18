@@ -1,0 +1,79 @@
+
+.text-welcome {
+        font-size: 25px;
+        font-family: "Fraunces variable", serif;
+        font-style: italic;
+    }
+h2 {
+        font-size: 40px;
+        font-family: "Fraunces varialbe", serif;
+        font-weight: bold;
+    }
+.buttons-info {
+        display: flex;
+        justify-content: left;
+        gap: 30px;
+        padding: 20px;
+        margin: 0px;
+        height: 50px;
+    }
+
+section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+        border: 2px;
+        padding: 100px;
+        margin: 10px;
+    }
+
+.btn-portafolio {
+        background-color: #7c3aed;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 30px;
+        color: #ffff;
+        cursor: pointer;
+        height: 45px;
+        width: 170px;
+    }
+.btn-write {
+        background-color: transparent;
+        color:#fff;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 30px;
+        cursor: pointer;
+        height: 45px;
+        width: 130px;
+    }
+    
+.left-section,
+    .right-section {
+        width: 50%;
+    }
+
+
+img {
+        border-radius: 20px;
+    }
+    
+
+.nombre {
+    background: linear-gradient(
+        90deg,
+        #ec4899,
+        #8b5cf6,
+        #3b82f6
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    }
+
+.myInfo{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif
+    }
+    
