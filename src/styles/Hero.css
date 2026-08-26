@@ -1,64 +1,73 @@
-
 .text-welcome {
-        font-size: 25px;
-        font-family: "Fraunces variable", serif;
-        font-style: italic;
-    }
+    font-size: clamp(20px, 2vw, 25px);
+    font-family: "Fraunces variable", serif;
+    font-style: italic;
+}
+
 h2 {
-        font-size: 40px;
-        font-family: "Fraunces varialbe", serif;
-        font-weight: bold;
-    }
-.buttons-info {
-        display: flex;
-        justify-content: left;
-        gap: 30px;
-        padding: 20px;
-        margin: 0px;
-        height: 50px;
-    }
+    font-size: clamp(30px, 4vw, 40px);
+    font-family: "Fraunces variable", serif;
+    font-weight: bold;
+}
 
 section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 100px;
-        border: 2px;
-        padding: 100px;
-        margin: 10px;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(30px, 6vw, 100px);
+
+    padding: clamp(30px, 8vw, 100px);
+    margin: 10px;
+
+    /* Si quieres borde */
+    /* border: 2px solid; */
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    min-width: 0;
+}
+
+.buttons-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px 0;
+}
 
 .btn-portafolio {
-        background-color: #7c3aed;
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-        border-radius: 30px;
-        color: #ffff;
-        cursor: pointer;
-        height: 45px;
-        width: 170px;
-    }
-.btn-write {
-        background-color: transparent;
-        color:#fff;
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-        border-radius: 30px;
-        cursor: pointer;
-        height: 45px;
-        width: 130px;
-    }
-    
-.left-section,
-    .right-section {
-        width: 50%;
-    }
+    background-color: #7c3aed;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    height: 45px;
+    width: 170px;
+    border: none;
+}
 
+.btn-write {
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 45px;
+    width: 130px;
+}
 
 img {
-        border-radius: 20px;
-    }
-    
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
 .nombre {
     background: linear-gradient(
@@ -69,11 +78,62 @@ img {
     );
 
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.myInfo {
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   TABLETS Y MÓVILES
+   ========================= */
+
+@media (max-width: 768px) {
+
+    section {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 40px;
+        padding: 40px 25px;
     }
 
-.myInfo{
-        font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif
+    .left-section,
+    .right-section {
+        width: 100%;
     }
-    
+
+    .buttons-info {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================
+   MÓVILES PEQUEÑOS
+   ========================= */
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 30px 15px;
+        margin: 0;
+    }
+
+    .buttons-info {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn-portafolio,
+    .btn-write {
+        width: 100%;
+    }
+
+}
