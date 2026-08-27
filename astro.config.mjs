@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig  } from 'astro/config';
 
 import react from '@astrojs/react';
 import partytown from '@astrojs/partytown';
@@ -9,6 +9,9 @@ export default defineConfig({
   integrations: [react(), partytown()],
   devToolbar: {
     enabled: false,
-
   },
+  /*image:{
+    service: passthroughImageService(),
+    passthroughImageService
+  }*/
 });
