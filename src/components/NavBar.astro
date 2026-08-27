@@ -1,6 +1,8 @@
 ---
 import "../styles/NavBar.css";
-import Logo from '../assets/Logo.jpg'
+import { Image } from 'astro:assets';
+
+import Logo3 from '../assets/Logo3.png'
 
 ---
 
@@ -10,7 +12,7 @@ import Logo from '../assets/Logo.jpg'
             <!-- Icono / Logo -->
             <li class="Logo">
                 <a href="/">
-                    <img src="" alt="Logo" />MonJS.dev
+                    <Image src={Logo3} alt="Logo" />
                 </a>
             </li>
 

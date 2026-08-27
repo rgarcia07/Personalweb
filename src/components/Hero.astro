@@ -13,7 +13,7 @@ const { id } = Astro.props;
     <div class="left-section">
         <div class="container-hero">
             <p class="text-welcome">
-                ¡Hola! Qué bueno tenerte por aquí "Icono".
+                ¡Hola! &#128075;.
             </p>
             <h1>
                 Soy <span class="nombre">Ramón García</span>
@@ -23,11 +23,11 @@ const { id } = Astro.props;
                 
             </h2>
 
-            <p class="myInfo">
-                -Web Developer Jr.<br />
-                -Graduado en Ingenieria en Sistemas C. en "TSJ"<br />
-                -Abierto a aprender nuevas tecnologías y lenguajes.<br />
-            </p>
+            <div class="my-information">
+            <p>Web Developer Jr.<br /></p>
+            <p>Graduado en Ingenieria en Sistemas C. en "TSJ"<br /></p>   
+            <p>Abierto a aprender nuevas tecnologías y lenguajes.<br /></p> 
+            </div>
 
             <div class="buttons-info">
                 <a href="#Portfolio">
@@ -48,7 +48,7 @@ const { id } = Astro.props;
     </div>
     <div class="right-section">
         <div class="container-photo">
-            <img src={PerfilPhoto.src} width="300" height="500" />
+            <img class="profile-img" src={PerfilPhoto.src} width="300" height="500" />
         </div>
     </div>
 </section>
