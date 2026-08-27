@@ -23,12 +23,5 @@
   },
   "devDependencies": {
     "sharp": "^0.35.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["sharp"],
-    "supportedArchitectures": {
-      "os": ["win32", "linux"],
-      "cpu": ["x64"]
-    }
   }
 }
