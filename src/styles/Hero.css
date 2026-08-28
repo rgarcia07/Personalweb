@@ -62,7 +62,7 @@ section {
 
 .profile-img {
     display: block;
-    width: clamp(180px, 30vw, 300px);
+    width: clamp(200px, 30vw, 300px);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50px;
