@@ -56,21 +56,12 @@ section {
     color: #fff;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 50%;
+    border-radius: 50px;
     cursor: pointer;
     height: 45px;
     width: 130px;
 }
 
-/*    IMAGEN / FOTO DE PERFIL    */
-
-.profile-img {
-    display: block;
-    width: clamp(200px, 30vw, 300px);
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50px;
-}
 
 .nombre {
     background: linear-gradient(
@@ -88,54 +79,4 @@ section {
 .my-information {
     font-size: clamp(16px, 1.5vw, 20px);
     font-family: "Fraunces variable", serif;
-}
-
-
-/*   TABLETS Y MÓVILES   */
-
-@media (max-width: 768px) {
-
-    section {
-        flex-direction: column;
-        align-items: center;
-
-        gap: 40px;
-        padding: 40px 25px;
-    }
-
-    .left-section,
-    .right-section {
-        width: 100%;
-    }
-
-    .buttons-info {
-        justify-content: center;
-    }
-
-}
-
-
-/*    MÓVILES PEQUEÑOS    */
-
-@media (max-width: 480px) {
-
-    section {
-        padding: 30px 15px;
-        margin: 0;
-    }
-
-    .buttons-info {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
-    .btn-portafolio,
-    .btn-write {
-        width: 100%;
-    }
-
-    img {
-        width: 200px;
-    }
 }
