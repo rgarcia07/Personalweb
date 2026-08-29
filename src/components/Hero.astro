@@ -10,14 +10,16 @@ const { id } = Astro.props;
 ---
 
 <section id={id}>
-    <div class="left-section">
+    <div class="left-section pl-35">
         <div class="container-hero">
-            <p class="text-welcome">
+            <p class="text-hello">
                 ¡Hola! &#128075;.
             </p>
+            <div class="pl-5">
             <h1>
                 Soy <span class="nombre">Ramón García</span>
             </h1>
+            </div>
             <h2>
                 Diseño y construyo interfaces <br />
                 
@@ -33,22 +35,16 @@ const { id } = Astro.props;
                 <a href="#Portfolio">
                     <button class="btn-portafolio"
                         >Ver mi portafolio
-                        <ArrowRight
-                            width="25"
-                            height="17"
-                            class="text-blue-500"
-                        />
-                    </button></a
-                >
+                    </button></a>
                 <a href="#Contact">
-                    <button class="btn-write">Escribeme</button>
+                    <button class="bg-transparent text-base">Escribeme</button>
                 </a>
             </div>
         </div>
     </div>
-    <div class="right-section">
+    <div class="right-section pl-60">
         <div class="container-photo">
-            <img class="w-16 md:w-32 lg:w-85" src={PerfilPhoto.src} />
+            <img class="w-16 md:w-32 lg:w-85 rounded-full" src={PerfilPhoto.src} />
         </div>
     </div>
 </section>
