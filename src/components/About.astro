@@ -1,6 +1,14 @@
 ---
 //src/components/About.astro
 import "../styles/About.css";
+import instagram from '../assets/instagram.png'
+import logogit from '../assets/logogit.png'
+import iconReact from '../assets/iconReact.png'
+import iconTail from '../assets/iconTail.png'
+import astroicon from '../assets/astroicon.png'
+
+
+
 
 const { id } = Astro.props;
 ---
@@ -9,12 +17,41 @@ const { id } = Astro.props;
     <div class="about-title">
         <h2 class="title-about">Sobre mí</h2>
     </div>
-    <div class="center-line"></div>
-    <div class="about-information">
-        <div class="photo-about">
-            <img src="" alt="Photo-mine" />
+    <div class="left-information">
+        <div class="about-information">
+            <div class="photo-about">
+                <img class="" src="" alt="Photo-mine" />
+            </div>
+            <article class="information">
+                <div class="personal-information"></div>
+                <div class="logos-rs">
+                    <div class="github-logo">
+                        <a href="https://github.com/rgarcia07"><img class="mt-[30px] w-[40px] h-[40px]" src={logogit.src} alt="Logo-git" /></a>
+                    </div>
+                    <div class="insta-logo">
+                        <a href="https://www.instagram.com/monjs.dev/"><img class="mt-[30px] w-[40px] h-[40px]" src={instagram.src} alt="Logo-insta" /></a>
+                    </div>
+                </div>
+            </article>
         </div>
+    </div>
 
-        <article class="information"></article>
+    <div class="center-line"></div>
+
+    <div class="right-information">
+        <div title="technolohy-title">
+            <h2 class="">Tecnologías</h2>
+        </div>
+        <div class="about-technology">
+            <div class="Astro-logo">
+                <a href=""><img class="" src={} alt="Logo-astro" /></a>
+            </div>
+            <div class="React-Logo">
+                <a href="https://es.react.dev/"><img class="" src={iconReact.src} alt="Logo-React" /></a>
+            </div>
+            <div class="Tailwind-logo">
+                <a href="https://tailwindcss.com/"><img class="" src={iconTail.src} alt="Logo-Tailwind" /></a>
+            </div>
+        </div>
     </div>
 </section>
