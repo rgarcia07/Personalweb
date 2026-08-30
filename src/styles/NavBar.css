@@ -7,24 +7,12 @@
 
     list-style: none;
     margin: 0;
+    margin-top:20px;
     padding: 20px 30px;
 
     position: relative;
 }
 
-.Logo {
-    position: absolute;
-    left: 100px;
-    display: flex;
-    align-items: center;
-}
-
-.Logo img {
-    margin-top: 80px;
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-}
 
 .navbar a {
     font-size: clamp(15px, 1.5vw, 20px);
@@ -37,71 +25,4 @@
 
 .navbar a:hover {
     color: #a78bfa;
-}
-
-
-/*   TABLET    */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        gap: 20px;
-        padding: 15px 20px;
-    }
-
-    .Logo {
-        left: 20px;
-    }
-
-}
-
-
-/*     MÓVIL     */
-
-
-@media (max-width: 600px) {
-
-    .navbar {
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        gap: 15px;
-
-        padding: 15px;
-        padding-left: 70px;
-    }
-
-    .Logo {
-        left: 15px;
-    }
-
-    .Logo img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .navbar a {
-        font-size: 14px;
-    }
-
-}
-
-
-   /*    MÓVIL PEQUEÑO   */
-
-@media (max-width: 400px) {
-
-    .navbar {
-        gap: 10px;
-        padding-left: 55px;
-    }
-
-    .Logo img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .navbar a {
-        font-size: 13px;
-    }
-
 }

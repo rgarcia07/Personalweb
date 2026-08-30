@@ -3,6 +3,7 @@ import "../styles/Hero.css";
 import "@fontsource-variable/fraunces";
 import "@fontsource-variable/fraunces/wght-italic.css";
 import PerfilPhoto from "../assets/PerfilPhoto.jpeg";
+import Icondiv from "../assets/Icondiv.png";
 
 const { id } = Astro.props;
 ---
@@ -14,33 +15,48 @@ const { id } = Astro.props;
            lg:px-20 lg:py-20"
 >
     <!-- Información -->
-    <div class="left-section w-full md:w-1/2">
+    <div
+        class="my-information
+           w-full max-w-lg mx-auto
+           md:ml-5
+           lg:ml-25"
+    >
         <div class="container-hero max-w-xl mx-auto md:mx-0">
             <p class="text-hello">¡Hola! &#128075;.</p>
 
-            <div class="md:pl-5">
+            <div class="md:pl-10">
                 <h1>
                     Soy <span class="nombre">Ramón García</span>
                 </h1>
             </div>
 
             <div>
-                <h2>Diseño y construyo interfaces</h2>
+                <h2>Diseño y construyo interfaces.</h2>
             </div>
 
             <div class="my-information">
                 <p>Web Developer Jr.</p>
-                <p>Graduado en Ingeniería en Sistemas C. en "TSJ"</p>
+                <p>Graduado en Ingeniería en Sistemas C."</p>
                 <p>Abierto a aprender nuevas tecnologías y lenguajes.</p>
             </div>
 
-            <div class="buttons-info">
+            <div
+                class="flex justify-start items-center flex-wrap gap-4 sm:gap-5 py-5"
+            >
                 <a href="#Portfolio">
-                    <button class="btn-portafolio"> Ver mi portafolio </button>
+                    <button
+                        class="bg-[#7c3aed] text-white font-sans text-sm rounded-full cursor-pointer h-11 w-36 sm:h-[45px] sm:w-[170px] border-none"
+                    >
+                        Ver mi portafolio
+                    </button>
                 </a>
 
                 <a href="#Contact">
-                    <button class="btn-write"> Escríbeme </button>
+                    <button
+                        class="bg-transparent text-white font-sans text-sm rounded-full cursor-pointer h-11 w-28 sm:h-[45px] sm:w-[130px] "
+                    >
+                        Escríbeme
+                    </button>
                 </a>
             </div>
         </div>
@@ -51,6 +67,17 @@ const { id } = Astro.props;
         class="right-section w-full md:w-1/2
                flex justify-center md:justify-start lg:justify-center"
     >
+        <div>
+            <img
+                src={Icondiv.src}
+                alt="Icono decorativo"
+                class="w-10 h-10
+            sm:w-12 sm:h-12
+            md:w-14 md:h-14
+            lg:w-16 lg:h-16
+            object-contain"
+            />
+        </div>
         <div
             class="rounded-full p-1
            bg-gradient-to-br from-purple-400 via-pink-500 to-cyan-400
@@ -65,6 +92,10 @@ const { id } = Astro.props;
                 alt="Ramón García"
                 class="w-full h-full rounded-full object-cover"
             />
+            <div
+                class="w-[20px] h-[20px] border-4 border-[#3498db] rounded-full bg-transparent"
+            >
+            </div>
         </div>
     </div>
 </section>

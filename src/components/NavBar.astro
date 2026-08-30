@@ -1,18 +1,21 @@
 ---
 import "../styles/NavBar.css";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import Logo3 from '../assets/Logo3.png'
-
+import monjslogo from "../assets/monjslogo.png";
 ---
 
 <header>
     <nav>
         <ul class="navbar">
             <!-- Icono / Logo -->
-            <li class="Logo">
+            <li class="absolute left-4 md:left-[100px] flex items-center">
                 <a href="/">
-                    <Image src={Logo3} alt="Logo" />
+                    <img
+                        src={monjslogo.src}
+                        alt="RD"
+                        class="mt-[30px] w-[150px] h-[150px] object-contain"
+                    />
                 </a>
             </li>
 
@@ -24,4 +27,3 @@ import Logo3 from '../assets/Logo3.png'
         </ul>
     </nav>
 </header>
-

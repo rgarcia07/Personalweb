@@ -20,8 +20,9 @@ section {
     align-items: center;
     gap: clamp(30px, 6vw, 100px);
 
-    padding: clamp(30px, 8vw, 100px);
+    padding: clamp(30px, 8vw, 90px);
     margin: 10px;
+    margin-top: 80px;
 }
 
 .left-section,
@@ -29,39 +30,6 @@ section {
     flex: 1;
     min-width: 0;
 }
-
-.buttons-info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.btn-portafolio {
-    background-color: #7c3aed;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    height: 45px;
-    width: 170px;
-    border: none;
-}
-
-.btn-write {
-    background-color: transparent;
-    color: #fff;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 50px;
-    cursor: pointer;
-    height: 45px;
-    width: 130px;
-}
-
 
 .nombre {
     background: linear-gradient(
