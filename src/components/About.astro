@@ -1,59 +1,141 @@
 ---
 //src/components/About.astro
 import "../styles/About.css";
-import instagram from '../assets/instagram.png'
-import logogit from '../assets/logogit.png'
-import iconReact from '../assets/iconReact.png'
-import iconTail from '../assets/iconTail.png'
-import astroicon from '../assets/astroicon.png'
-import Logoastro from '../assets/Astro.svg'
-
-
+import instagram from "../assets/instagram.png";
+import logogit from "../assets/logogit.png";
+import React from "../assets/React.svg";
+import Tailwind from "../assets/Tailwind.svg";
+import Logoastro from "../assets/Astro.svg";
+import LinkedIn from "../assets/LinkedIn.svg"
 
 const { id } = Astro.props;
 ---
 
-<section id={id}>
-    <div class="about-title">
-        <h2 class="title-about">Sobre mí</h2>
-    </div>
-    <div class="left-information">
-        <div class="about-information">
+<section id={id} class="grid grid-cols-3 grid-rows-3 gap-4">
+    <div class="grid grid-cols-2 grid-rows-1 gap-4 ">
+        <div class="">
+            <div class="">
+                <h2 class="title-about">Sobre mí</h2>
+            </div>
             <div class="photo-about">
                 <img class="" src="" alt="Photo-mine" />
             </div>
-            <article class="information">
-                <div class="personal-information">
-                    <p>Soy un desarrollador principante en el ambito web,<br> apasionado por la tecnolgía, <br>
-                        actualmente me enfoco en React, Astro <br> y constante aprendizaje en JS</p>
-                </div>
-                <div class="flex gap-5">
-                    <div class="github-logo">
-                        <a href="https://github.com/rgarcia07"><img class="mt-[30px] w-[40px] h-[40px]" src={logogit.src} alt="Logo-git" /></a>
+        </div>
+
+        <div class="left-information">
+            <div class="about-information">
+                <article class="information">
+                    <div class="personal-information">
+                        <p>
+                            Soy desarrollador web principante,<br /> apasionado por
+                            la tecnolgía, <br />
+                            actualmente me enfoco en React, Astro <br /> y constante
+                            aprendizaje en JS.
+                        </p>
                     </div>
-                    <div class="insta-logo">
-                        <a href="https://www.instagram.com/monjs.dev/"><img class="mt-[30px] w-[40px] h-[40px]" src={instagram.src} alt="Logo-insta" /></a>
+                    <div class="flex gap-5">
+                        <div class="github-logo">
+                            <a
+                                href="https://github.com/rgarcia07"
+                                target="_blank"
+                                class=""
+                                ><img
+                                    class="mt-[30px] w-[40px] h-[40px] cursor-pointer"
+                                    src={logogit.src}
+                                    alt="Logo-git"
+                                /></a
+                            >
+                        </div>
+                        <div class="insta-logo">
+                            <a
+                                href="https://www.instagram.com/monjs.dev/"
+                                target="_blank"
+                                class=""
+                                ><img
+                                    class="mt-[30px] w-[40px] h-[40px] cursor-pointer"
+                                    src={instagram.src}
+                                    alt="Logo-insta"
+                                /></a
+                            >
+                        </div>
+                        <div class="linkedin-logo">
+                            <a
+                                href="https://www.linkedin.com/in/ram%C3%B3n-garc%C3%ADa-67282b388/"
+                                target="_blank"
+                                class=""
+                                ><img
+                                    class="mt-[30px] w-[40px] h-[40px] cursor-pointer"
+                                    src={LinkedIn.src}
+                                    alt="Logo-insta"
+                                /></a
+                            >
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </div>
 
     <div class="center-line"></div>
 
-    <div class="right-information">
+    <div class="flex flex-col gap-14">
         <div title="technolohy-title">
             <h2 class="">Tecnologías</h2>
         </div>
-        <div class="grid grid-cols-4 grid-rows-1 object-contain gap-10">
-            <div class="Astro-logo">
-                <a href=""><img class="mt-[50px] w-[60px] h-[60px]" src={Logoastro.src} alt="Logo-astro" /></a>
+        <div
+            class="grid grid-cols-4 gap-10
+        [&>div]:w-[90px]
+        [&>div]:h-[100px]
+        [&>div]:bg-[#E3E1E1]/10
+        [&>div]:rounded-lg
+        [&>div]:flex
+        [&>div]:items-center
+        [&>div]:justify-center
+        [&>div]:text-center"
+        >
+            <div>
+                <a
+                    href="https://astro.build/"
+                    target="_blank"
+                    class="flex flex-col items-center justify-center w-full h-full"
+                >
+                    <img
+                        class="w-[60px] h-[60px] cursor-pointer"
+                        src={Logoastro.src}
+                        alt="Logo-astro"
+                    />
+                    <p>Astro</p>
+                </a>
             </div>
-            <div class="bg-transparent">
-                <a href="https://es.react.dev/"><img class="mt-[50px] w-[60px] h-[60px]" src={iconReact.src} alt="Logo-React" /></a>
+
+            <div>
+                <a
+                    href="https://es.react.dev/"
+                    target="_blank"
+                    class="flex flex-col items-center justify-center w-full h-full"
+                >
+                    <img
+                        class="w-[60px] h-[60px] cursor-pointer"
+                        src={React.src}
+                        alt="Logo-React"
+                    />
+                    <p>React</p>
+                </a>
             </div>
-            <div class="Tailwind-logo">
-                <a href="https://tailwindcss.com/"><img class="mt-[50px] w-[60px] h-[60px]" src={iconTail.src} alt="Logo-Tailwind" /></a>
+
+            <div>
+                <a
+                    href="https://tailwindcss.com/"
+                    target="_blank"
+                    class="flex flex-col items-center justify-center w-full h-full"
+                >
+                    <img
+                        class="w-[60px] h-[60px] cursor-pointer"
+                        src={Tailwind.src}
+                        alt="Logo-Tailwind"
+                    />
+                    <p>Tailwind</p>
+                </a>
             </div>
         </div>
     </div>
