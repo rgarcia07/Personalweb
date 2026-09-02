@@ -6,13 +6,13 @@ import logogit from "../assets/logogit.png";
 import React from "../assets/React.svg";
 import Tailwind from "../assets/Tailwind.svg";
 import Logoastro from "../assets/Astro.svg";
-import LinkedIn from "../assets/LinkedIn.svg"
+import LinkedIn from "../assets/LinkedIn.svg";
 
 const { id } = Astro.props;
 ---
 
 <section id={id} class="grid grid-cols-3 grid-rows-3 gap-4">
-    <div class="grid grid-cols-2 grid-rows-1 gap-4 ">
+    <div class="grid grid-cols-2 grid-rows-1 gap-4">
         <div class="">
             <div class="">
                 <h2 class="title-about">Sobre mí</h2>
@@ -78,8 +78,8 @@ const { id } = Astro.props;
 
     <div class="center-line"></div>
 
-    <div class="flex flex-col gap-14">
-        <div title="technolohy-title">
+    <div class="flex flex-col gap-10">
+        <div class="">
             <h2 class="">Tecnologías</h2>
         </div>
         <div
@@ -119,7 +119,7 @@ const { id } = Astro.props;
                         src={React.src}
                         alt="Logo-React"
                     />
-                    <p>React</p>
+                    <p class="text-[#58C4DC]">React</p>
                 </a>
             </div>
 
@@ -134,7 +134,7 @@ const { id } = Astro.props;
                         src={Tailwind.src}
                         alt="Logo-Tailwind"
                     />
-                    <p>Tailwind</p>
+                    <p class="text-[var(--color-sky-300)]">Tailwind</p>
                 </a>
             </div>
         </div>

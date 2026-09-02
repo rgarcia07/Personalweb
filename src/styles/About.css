@@ -7,3 +7,7 @@
     height: 200px;
     margin-top: 50px;
 }
+
+.name.react{
+    color: rgb(88 196 220/var(--tw-bg-opacity))
+}

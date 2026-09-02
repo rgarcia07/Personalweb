@@ -7,23 +7,23 @@ import monjslogo from "../assets/monjslogo.png";
 
 <header>
     <nav>
-        <ul class="navbar">
+        <ul class="navbar flex flex-wrap items-center justify-center gap-3 sm:gap-6 relative py-2">
             <!-- Icono / Logo -->
-            <li class="absolute left-4 md:left-[100px] flex items-center">
+            <li class="absolute left-2 sm:left-4 md:left-[100px] flex items-center">
                 <a href="/">
                     <img
                         src={monjslogo.src}
                         alt="RD"
-                        class="mt-[30px] w-[150px] h-[150px] object-contain"
+                        class="mt-2 sm:mt-4 md:mt-[30px] w-16 h-16 sm:w-24 sm:h-24 md:w-[150px] md:h-[150px] object-contain"
                     />
                 </a>
             </li>
 
             <!-- Enlaces -->
-            <li><a href="#About">Sobre mí</a></li>
-            <li><a href="#Experience">Experiencia</a></li>
-            <li><a href="#Portfolio">Portafolio</a></li>
-            <li><a href="#Contact">Contacto</a></li>
+            <li><a href="#About" class="text-sm sm:text-base">Sobre mí</a></li>
+            <li><a href="#Experience" class="text-sm sm:text-base">Experiencia</a></li>
+            <li><a href="#Portfolio" class="text-sm sm:text-base">Portafolio</a></li>
+            <li><a href="#Contact" class="text-sm sm:text-base">Contacto</a></li>
         </ul>
     </nav>
 </header>
