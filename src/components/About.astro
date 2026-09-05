@@ -11,131 +11,176 @@ import LinkedIn from "../assets/LinkedIn.svg";
 const { id } = Astro.props;
 ---
 
-<section id={id} class="grid grid-cols-3 grid-rows-3 gap-4">
-    <div class="grid grid-cols-2 grid-rows-1 gap-4">
-        <div class="">
-            <div class="">
-                <h2 class="title-about">Sobre mí</h2>
-            </div>
-            <div class="photo-about">
-                <img class="" src="" alt="Photo-mine" />
-            </div>
-        </div>
+<section
+    id={id}
+    class="w-full grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 items-center"
+>
+    <!-- SOBRE MÍ -->
+    <div class="w-full md:justify-self-start">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-6
+                   w-full max-w-2xl mx-auto md:mx-0"
+        >
+            <!-- Foto + título -->
+            <div class="flex flex-col items-center">
+                <div>
+                    <h2 class="title-about">Sobre mí</h2>
+                </div>
 
-        <div class="left-information">
-            <div class="about-information">
-                <article class="information">
-                    <div class="personal-information">
-                        <p>
-                            Soy desarrollador web principante,<br /> apasionado por
-                            la tecnolgía, <br />
-                            actualmente me enfoco en React, Astro <br /> y constante
-                            aprendizaje en JS.
-                        </p>
-                    </div>
-                    <div class="flex gap-5">
-                        <div class="github-logo">
+                <div class="photo-about">
+                    <img
+                        src=""
+                        alt="Photo-mine"
+                        class="max-w-full h-auto"
+                    />
+                </div>
+            </div>
+
+            <!-- Información -->
+            <div class="left-information">
+                <div class="about-information">
+                    <article class="information">
+                        <div class="personal-information">
+                            <p>
+                                Soy desarrollador web principiante,
+                                <br />
+                                apasionado por la tecnología,
+                                <br />
+                                actualmente me enfoco en React, Astro
+                                <br />
+                                y constante aprendizaje en JS.
+                            </p>
+                        </div>
+
+                        <!-- Redes -->
+                        <div
+                            class="flex flex-wrap items-center gap-[clamp(0.75rem,2vw,1.25rem)]"
+                        >
                             <a
                                 href="https://github.com/rgarcia07"
                                 target="_blank"
-                                class=""
-                                ><img
-                                    class="mt-[30px] w-[40px] h-[40px] cursor-pointer"
-                                    src={logogit.src}
-                                    alt="Logo-git"
-                                /></a
+                                rel="noopener noreferrer"
                             >
-                        </div>
-                        <div class="insta-logo">
+                                <img
+                                    class="w-[clamp(2rem,5vw,2.5rem)]
+                                           h-[clamp(2rem,5vw,2.5rem)]
+                                           cursor-pointer"
+                                    src={logogit.src}
+                                    alt="Logo GitHub"
+                                />
+                            </a>
+
                             <a
                                 href="https://www.instagram.com/monjs.dev/"
                                 target="_blank"
-                                class=""
-                                ><img
-                                    class="mt-[30px] w-[40px] h-[40px] cursor-pointer"
-                                    src={instagram.src}
-                                    alt="Logo-insta"
-                                /></a
+                                rel="noopener noreferrer"
                             >
-                        </div>
-                        <div class="linkedin-logo">
+                                <img
+                                    class="w-[clamp(2rem,5vw,2.5rem)]
+                                           h-[clamp(2rem,5vw,2.5rem)]
+                                           cursor-pointer"
+                                    src={instagram.src}
+                                    alt="Logo Instagram"
+                                />
+                            </a>
+
                             <a
                                 href="https://www.linkedin.com/in/ram%C3%B3n-garc%C3%ADa-67282b388/"
                                 target="_blank"
-                                class=""
-                                ><img
-                                    class="mt-[30px] w-[40px] h-[40px] cursor-pointer"
-                                    src={LinkedIn.src}
-                                    alt="Logo-insta"
-                                /></a
+                                rel="noopener noreferrer"
                             >
+                                <img
+                                    class="w-[clamp(2rem,5vw,2.5rem)]
+                                           h-[clamp(2rem,5vw,2.5rem)]
+                                           cursor-pointer"
+                                    src={LinkedIn.src}
+                                    alt="Logo LinkedIn"
+                                />
+                            </a>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="center-line"></div>
+    <!-- LÍNEA CENTRAL -->
+    <div class="hidden md:block center-line h-full"></div>
 
-    <div class="flex flex-col gap-10">
-        <div class="">
-            <h2 class="">Tecnologías</h2>
-        </div>
-        <div
-            class="grid grid-cols-4 gap-10
-        [&>div]:w-[90px]
-        [&>div]:h-[100px]
-        [&>div]:bg-[#E3E1E1]/10
-        [&>div]:rounded-lg
-        [&>div]:flex
-        [&>div]:items-center
-        [&>div]:justify-center
-        [&>div]:text-center"
-        >
+    <!-- TECNOLOGÍAS -->
+    <div class="w-full md:justify-self-end">
+        <div class="flex flex-col gap-10 max-w-xl mx-auto md:mx-0">
             <div>
-                <a
-                    href="https://astro.build/"
-                    target="_blank"
-                    class="flex flex-col items-center justify-center w-full h-full"
-                >
-                    <img
-                        class="w-[60px] h-[60px] cursor-pointer"
-                        src={Logoastro.src}
-                        alt="Logo-astro"
-                    />
-                    <p>Astro</p>
-                </a>
+                <h2>Tecnologías</h2>
             </div>
 
-            <div>
-                <a
-                    href="https://es.react.dev/"
-                    target="_blank"
-                    class="flex flex-col items-center justify-center w-full h-full"
+            <div
+                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
+            >
+                <div
+                    class="w-[90px] h-[100px]
+                           bg-[#E3E1E1]/10
+                           rounded-lg
+                           flex items-center justify-center
+                           text-center"
                 >
-                    <img
-                        class="w-[60px] h-[60px] cursor-pointer"
-                        src={React.src}
-                        alt="Logo-React"
-                    />
-                    <p class="text-[#58C4DC]">React</p>
-                </a>
-            </div>
+                    <a
+                        href="https://astro.build/"
+                        target="_blank"
+                        class="flex flex-col items-center justify-center w-full h-full"
+                    >
+                        <img
+                            class="w-[60px] h-[60px] cursor-pointer"
+                            src={Logoastro.src}
+                            alt="Logo-astro"
+                        />
+                        <p class="text-[#f041ff]">Astro</p>
+                    </a>
+                </div>
 
-            <div>
-                <a
-                    href="https://tailwindcss.com/"
-                    target="_blank"
-                    class="flex flex-col items-center justify-center w-full h-full"
+                <div
+                    class="w-[90px] h-[100px]
+                           bg-[#E3E1E1]/10
+                           rounded-lg
+                           flex items-center justify-center
+                           text-center"
                 >
-                    <img
-                        class="w-[60px] h-[60px] cursor-pointer"
-                        src={Tailwind.src}
-                        alt="Logo-Tailwind"
-                    />
-                    <p class="text-[var(--color-sky-300)]">Tailwind</p>
-                </a>
+                    <a
+                        href="https://es.react.dev/"
+                        target="_blank"
+                        class="flex flex-col items-center justify-center w-full h-full"
+                    >
+                        <img
+                            class="w-[60px] h-[60px] cursor-pointer"
+                            src={React.src}
+                            alt="Logo-React"
+                        />
+                        <p class="text-[#58C4DC]">React</p>
+                    </a>
+                </div>
+
+                <div
+                    class="w-[90px] h-[100px]
+                           bg-[#E3E1E1]/10
+                           rounded-lg
+                           flex items-center justify-center
+                           text-center"
+                >
+                    <a
+                        href="https://tailwindcss.com/"
+                        target="_blank"
+                        class="flex flex-col items-center justify-center w-full h-full"
+                    >
+                        <img
+                            class="w-[60px] h-[60px] cursor-pointer"
+                            src={Tailwind.src}
+                            alt="Logo-Tailwind"
+                        />
+                        <p class="text-[var(--color-sky-300)]">
+                            Tailwind
+                        </p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

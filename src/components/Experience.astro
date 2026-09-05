@@ -1,9 +1,34 @@
 ---
 //src/components/Experience.astro
+import "../styles/Experience.css";
 
 const { id } = Astro.props;
 ---
 
-<section id={id}>
-    <h2>Experiencia</h2>
+<section id={id} class=" w-full">
+    <div class="grid grid-cols-3 ites-center w-full">
+        <div class="justify-self-center md:justify-self-start">
+            <h2>Experiencia</h2>
+            <div>
+                <div>
+                    <p>"Experience 1"</p>
+                </div>
+                <div>
+                    <p>"LUGAR EMP." <span>Fecha.</span></p>
+                </div>
+                <div>
+                    <p class="">
+                        Desarrollo de aplicaciones web, con React, Node.js y
+                        bases de datos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="line-central hidden lg:block justify-self-center"></div>
+
+        <div class="justify-self-center md:justify-self-end">
+            <h2>Portafolio destacado</h2>
+        </div>
+    </div>
 </section>
