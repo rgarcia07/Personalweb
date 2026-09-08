@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+.section-container {
+    width: 90%;
+    max-width: 1500px;
+    min-height: 300px;
+    margin: 100px auto 80px;
+    padding: 1rem;
+
+    border-radius: none;
+    ;
+}
+@media (max-width: 640px) {
+    .section-container {
+        width: 94%;
+        min-height: auto;
+        padding: 1.25rem;
+    }
+}

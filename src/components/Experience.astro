@@ -1,15 +1,24 @@
 ---
 //src/components/Experience.astro
 import "../styles/Experience.css";
+import Portfolio from "../components/Portfolio.astro";
+
 
 const { id } = Astro.props;
 ---
 
-<section id={id} class=" w-full">
+<section id={id} class="section-container w-[90%] max-w-[1200px] min-h-[500px] mx-auto ">
     <div class="grid grid-cols-3 ites-center w-full">
         <div class="justify-self-center md:justify-self-start">
             <h2>Experiencia</h2>
-            <div>
+            <div class="
+            w-fit 
+            p-5 
+            border-2 
+            rounded-xl  
+            border-none 
+            shadow-[0_0_15px_rgba(255,255,255,0.1)] 
+            bg-[#080517]">
                 <div>
                     <p>"Experience 1"</p>
                 </div>
@@ -28,7 +37,9 @@ const { id } = Astro.props;
         <div class="line-central hidden lg:block justify-self-center"></div>
 
         <div class="justify-self-center md:justify-self-end">
-            <h2>Portafolio destacado</h2>
+            <div>
+                <Portfolio id="Portfolio"/>
+            </div>
         </div>
     </div>
 </section>
