@@ -7,39 +7,73 @@ import Portfolio from "../components/Portfolio.astro";
 const { id } = Astro.props;
 ---
 
-<section id={id} class="section-container w-[90%] max-w-[1200px] min-h-[500px] mx-auto ">
-    <div class="grid grid-cols-3 ites-center w-full">
-        <div class="justify-self-center md:justify-self-start">
+<section
+    id={id}
+    class="section-container w-[90%] max-w-[1200px] min-h-[500px] mx-auto"
+>
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-start gap-10 w-full">
+
+        <!-- EXPERIENCIA -->
+        <div class="justify-self-center lg:justify-self-start">
             <h2>Experiencia</h2>
-            <div class="
-            w-fit 
-            p-5 
-            border-2 
-            rounded-xl  
-            border-none 
-            shadow-[0_0_15px_rgba(255,255,255,0.1)] 
-            bg-[#080517]">
-                <div>
-                    <p>"Experience 1"</p>
-                </div>
-                <div>
-                    <p>"LUGAR EMP." <span>Fecha.</span></p>
-                </div>
-                <div>
-                    <p class="">
-                        Desarrollo de aplicaciones web, con React, Node.js y
-                        bases de datos.
-                    </p>
-                </div>
-            </div>
+
+            <div class="flex flex-col gap-5 max-h-[500px] overflow-y-auto pr-3">
+
+    <!-- Experiencia 1 -->
+    <div
+        class="w-full max-w-[450px] p-5 rounded-xl
+        shadow-[0_0_15px_rgba(255,255,255,0.1)]
+        bg-[#080517]"
+    >
+        <div>
+            <p>"Experience 1"</p>
         </div>
 
-        <div class="line-central hidden lg:block justify-self-center"></div>
-
-        <div class="justify-self-center md:justify-self-end">
-            <div>
-                <Portfolio id="Portfolio"/>
-            </div>
+        <div>
+            <p>"LUGAR EMP." <span>Fecha.</span></p>
         </div>
+
+        <div>
+            <p>
+                Desarrollo de aplicaciones web, con React, Node.js y
+                bases de datos.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Experiencia 2 -->
+    <div
+        class="w-full max-w-[450px] p-5 rounded-xl
+        shadow-[0_0_15px_rgba(255,255,255,0.1)]
+        bg-[#080517]"
+    >
+        <div>
+            <p>"Experience 2"</p>
+        </div>
+
+        <div>
+            <p>"OTRO LUGAR" <span>Fecha.</span></p>
+        </div>
+
+        <div>
+            <p>
+                Desarrollo de otra aplicación utilizando diferentes
+                tecnologías.
+            </p>
+        </div>
+    </div>
+
+</div>
+        </div>
+
+        <!-- LÍNEA CENTRAL -->
+        <div class="hidden lg:block w-px min-h-75 bg-[#E3E1E1]/20"></div>
+
+        <!-- PORTAFOLIO -->
+        <div class="justify-self-center lg:justify-self-end">
+            <Portfolio id="Portfolio" />
+        </div>
+
     </div>
 </section>
