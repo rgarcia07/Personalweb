@@ -3,7 +3,6 @@
 import "../styles/Experience.css";
 import Portfolio from "../components/Portfolio.astro";
 
-
 const { id } = Astro.props;
 ---
 
@@ -11,67 +10,154 @@ const { id } = Astro.props;
     id={id}
     class="section-container w-[90%] max-w-[1200px] min-h-[500px] mx-auto"
 >
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-start gap-10 w-full">
+    <div
+        class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr]
+               items-start gap-10 w-full"
+    >
 
         <!-- EXPERIENCIA -->
-        <div class="justify-self-center lg:justify-self-start">
+        <div class="w-full max-w-[550px] justify-self-center lg:justify-self-start">
+
             <h2>Experiencia</h2>
 
-            <div class="flex flex-col gap-5 max-h-[500px] overflow-y-auto pr-3">
+            <!-- CONTENEDOR DEL SCROLL -->
+            <div
+                class="relative
+                       flex flex-col gap-8
+                       max-h-[500px]
+                       overflow-y-auto
+                       pr-3"
+            >
 
-    <!-- Experiencia 1 -->
-    <div
-        class="w-full max-w-[450px] p-5 rounded-xl
-        shadow-[0_0_15px_rgba(255,255,255,0.1)]
-        bg-[#080517]"
-    >
-        <div>
-            <p>"Experience 1"</p>
+                <!-- Línea vertical -->
+                <div
+                    class="absolute
+                           left-[7px]
+                           top-2
+                           bottom-2
+                           w-[2px]
+                           bg-white/20"
+                ></div>
+
+
+                <!-- EXPERIENCIA 1 -->
+                <div class="relative flex items-start gap-6">
+
+                    <!-- Punto -->
+                    <div
+                        class="relative z-10
+                               mt-5
+                               w-4 h-4
+                               shrink-0
+                               rounded-full
+                               bg-amber-400
+                               border-4 border-[#080517]
+                               shadow-[0_0_10px_rgba(251,191,36,0.6)]"
+                    ></div>
+
+
+                    <!-- Tarjeta -->
+                    <div
+                        class="w-full
+                               p-4 sm:p-5
+                               rounded-xl
+                               shadow-[0_0_15px_rgba(255,255,255,0.1)]
+                               bg-[#080517]"
+                    >
+                        <div
+                            class="flex flex-col sm:flex-row
+                                   sm:justify-between
+                                   sm:items-center
+                                   gap-2"
+                        >
+                            <h3 class="font-bold">
+                                Desarrollador Full Stack
+                            </h3>
+
+                            <span class="text-sm text-gray-400">
+                                2026 - Actualidad
+                            </span>
+                        </div>
+
+                        <p class="text-sky-300 text-sm">
+                            "POR AGREGAR"
+                        </p>
+
+                        <p class="mt-3 text-sm text-gray-300">
+                            Desarrollo de aplicaciones web con React,
+                            Node.js y bases de datos.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- EXPERIENCIA 2 -->
+                <div class="relative flex items-start gap-6">
+
+                    <!-- Punto -->
+                    <div
+                        class="relative z-10
+                               mt-5
+                               w-4 h-4
+                               shrink-0
+                               rounded-full
+                               bg-blue-400
+                               border-4 border-[#080517]
+                               shadow-[0_0_10px_rgba(96,165,250,0.6)]"
+                    ></div>
+
+
+                    <!-- Tarjeta -->
+                    <div
+                        class="w-full
+                               p-4 sm:p-5
+                               rounded-xl
+                               shadow-[0_0_15px_rgba(255,255,255,0.1)]
+                               bg-[#080517]"
+                    >
+                        <div
+                            class="flex flex-col sm:flex-row
+                                   sm:justify-between
+                                   sm:items-center
+                                   gap-2"
+                        >
+                            <h3 class="font-bold">
+                                Desarrollador Frontend
+                            </h3>
+
+                            <span class="text-sm text-gray-400">
+                                2026 - Actualidad
+                            </span>
+                        </div>
+
+                        <p class="text-sky-300 text-sm">
+                            "POR AGREGAR"
+                        </p>
+
+                        <p class="mt-3 text-sm text-gray-300">
+                            Construcción de interfaces modernas y
+                            responsivas con enfoque en UX/UI.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <div>
-            <p>"LUGAR EMP." <span>Fecha.</span></p>
-        </div>
-
-        <div>
-            <p>
-                Desarrollo de aplicaciones web, con React, Node.js y
-                bases de datos.
-            </p>
-        </div>
-    </div>
-
-
-    <!-- Experiencia 2 -->
-    <div
-        class="w-full max-w-[450px] p-5 rounded-xl
-        shadow-[0_0_15px_rgba(255,255,255,0.1)]
-        bg-[#080517]"
-    >
-        <div>
-            <p>"Experience 2"</p>
-        </div>
-
-        <div>
-            <p>"OTRO LUGAR" <span>Fecha.</span></p>
-        </div>
-
-        <div>
-            <p>
-                Desarrollo de otra aplicación utilizando diferentes
-                tecnologías.
-            </p>
-        </div>
-    </div>
-
-</div>
-        </div>
 
         <!-- LÍNEA CENTRAL -->
-        <div class="hidden lg:block w-px min-h-75 bg-[#E3E1E1]/20"></div>
+        <div
+            class="hidden lg:block
+                   w-px
+                   min-h-[300px]
+                   bg-[#E3E1E1]/20"
+        ></div>
+
 
         <!-- PORTAFOLIO -->
-        <div class="justify-self-center lg:justify-self-end">
+        <div class="w-full max-w-[550px] justify-self-center lg:justify-self-end">
             <Portfolio id="Portfolio" />
         </div>
 
