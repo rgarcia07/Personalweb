@@ -5,12 +5,94 @@ const { id } = Astro.props;
 ---
 
 <section id={id}>
-  <div>
-        <div class="my-information
-           w-full max-w-lg mx-auto
-           md:ml-5
-           lg:ml-25">
-            <h2>Contactame</h2>
+  <div
+    id="contact-modal"
+    class="modal hidden fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+  >
+    <div
+      class="relative w-full max-w-lg rounded-xl bg-[#080817] p-6 text-white shadow-xl"
+    >
+      <!-- Cerrar -->
+      <button
+        id="close-contact"
+        class="absolute right-4 top-3 text-2xl"
+        aria-label="Cerrar"
+      >
+        &times;
+      </button>
+      <h2 class="mb-6 text-3xl font-bold">Contáctame</h2>
+      <form class="flex flex-col gap-4">
+        <div class="flex flex-col gap-1">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre Completo"
+            required
+            class="rounded-lg border border-white/20 bg-white/5 p-3 outline-none"
+          />
         </div>
-      </div>
+        <div class="flex flex-col gap-1">
+          <label for="email">Correo</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required
+            class="rounded-lg border border-white/20 bg-white/5 p-3 outline-none"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="telefono">Teléfono</label>
+          <input
+            type="number"
+            id="telefono"
+            name="telefono"
+            placeholder="1234567890 (10 Dígitos)."
+            required
+            class="rounded-lg border border-white/20 bg-white/5 p-3 outline-none"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Escribe tu mensaje..."
+            required
+            class="rounded-lg border border-white/20 bg-white/5 p-3 outline-none"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="rounded-lg bg-white px-4 py-3 font-bold text-[#080817]"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
 </section>
+
+<script>
+  const modal = document.getElementById("contact-modal");
+const closeButton = document.getElementById("close-contact");
+
+document.querySelectorAll('[data-modal="contact-modal"]').forEach((link) => link.addEventListener("click", (event) => {
+    event.preventDefault();
+    modal?.classList.remove("hidden");
+;}))
+
+closeButton?.addEventListener("click",() =>{
+    modal?.classList.add("hidden");
+});
+
+modal?.addEventListener("click",(event)=> {
+    if(event.target === modal){
+        modal.classList.add("hidden");
+    }
+});
+</script>
