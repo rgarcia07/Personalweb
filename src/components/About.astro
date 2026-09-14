@@ -11,10 +11,7 @@ import LinkedIn from "../assets/LinkedIn.svg";
 const { id } = Astro.props;
 ---
 
-<section
-    id={id}
-    class="section-container"
->
+<section id={id} class="section-container">
     <!-- SOBRE MÍ -->
     <div class="w-full md:justify-self-start">
         <div
@@ -22,17 +19,13 @@ const { id } = Astro.props;
                    w-full max-w-2xl mx-auto md:mx-0"
         >
             <!-- Foto + título -->
-            <div class="flex flex-col ">
+            <div class="flex flex-col">
                 <div>
                     <h2 class="title-about">Sobre mí</h2>
                 </div>
 
                 <div class="photo-about">
-                    <img
-                        src=""
-                        alt="Photo-mine"
-                        class="max-w-full h-auto"
-                    />
+                    <img src="" alt="Photo-mine" class="max-w-full h-auto" />
                 </div>
             </div>
 
@@ -41,14 +34,10 @@ const { id } = Astro.props;
                 <div class="about-information">
                     <article class="information">
                         <div class="personal-information">
-                            <p>
-                                Soy desarrollador web principiante,
-                                <br />
-                                apasionado por la tecnología,
-                                <br />
-                                actualmente me enfoco en React, Astro
-                                <br />
-                                y constante aprendizaje en JS.
+                            <p class="text-justify leading-relaxed">
+                                Soy desarrollador web principiante, apasionado
+                                por la tecnología, actualmente me enfoco en
+                                React, Astro y constante aprendizaje en JS.
                             </p>
                         </div>
 
@@ -114,9 +103,7 @@ const { id } = Astro.props;
                 <h2>Tecnologías</h2>
             </div>
 
-            <div
-                class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
-            >
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div
                     class="w-[90px] h-[100px]
                            bg-[#E3E1E1]/10
@@ -176,9 +163,7 @@ const { id } = Astro.props;
                             src={Tailwind.src}
                             alt="Logo-Tailwind"
                         />
-                        <p class="text-[var(--color-sky-300)]">
-                            Tailwind
-                        </p>
+                        <p class="text-[var(--color-sky-300)]">Tailwind</p>
                     </a>
                 </div>
             </div>
